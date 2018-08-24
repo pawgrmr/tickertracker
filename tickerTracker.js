@@ -1,12 +1,27 @@
-
 var square = document.querySelector(".square");
 
-square.addEventListener("mousedown", addClicks); // display the click count inside the square
+square.addEventListener("mousedown", function(){
+	//each click = 1 tap count
 
-// function addClicks( event ) {
-// 	event.target.textContent = event.detail; //detail: consecutive clicks in a short amount of time.
-// };
+	//stop when tap count = 50
+	//add 1 to an empty array
+	//sum of clicks 
+	//equal the sum of clicks to the tap count
+}
 
-function addClicks(event) {
+
+function tapCount(){
+
+}
+
+function timer(){
+
+}
+
+function reset(){
+
+}
+
+function help(){
 	
 }
