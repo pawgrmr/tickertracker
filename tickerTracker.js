@@ -1,19 +1,19 @@
 var square = document.querySelector(".square");
 // var timer;
 
+
 square.addEventListener("click", function(){
 	
 	//start timer function 1
-
 	//finish timer function 2 - after 30 sec
-
-	// startTimer();
+	countDown(30);
+	
 	// tap(); //function 3
 	//start with empty array
 	//add 1 to an empty array
 
 
-	countDown(5);
+	
 	//each click = 1 tap count function 4
 
 	//sum of clicks - function 5 
@@ -24,52 +24,61 @@ square.addEventListener("click", function(){
 
 })
 
-// function startTimer() {
-// 	let timer = setTimeout(tap, 30000);
-// 	//If the remaining time gets to zero, stop the clock
-// }
+
 
 function countDown (count) {
-	if (count > -1) {
+	if (count > 0) {
 		var x = document.getElementById("timerDiv");
 		x.innerHTML = count;
-		setTimeout (function() {countDown(count-1);}, 1000);
+		timer = setTimeout (function() {countDown(count-1);}, 1000);
+		reset();
 	}
 	else 
-		x.innerHTML 
-		count=0;
+		var x = document.getElementById("timerDiv");
+		x.innerHTML = count;
 }
 
-function tap() {
-  var arr = [];
+function tapCount(tap) {
+ 
+ if(tap = 0){
+ 	tap++;
+ 	var y = document.getElementById("taps");
+ 	y.innerHTML = tap;
+ 	//add statement here about clickCount running until timer runs out
+ }
+ // else 
+ // 	var y = document.getElementById("taps");
+ // 	y.innerHTML = "START";
+ } 
 
-  for (i = 0; i < 5; i++) {
-    arr.push(1)
-  }
+// function tap() {
+//   var arr = [];
+
+//   for (i = 0; i < 5; i++) {
+//     arr.push(1)
+//   }
   
-  alert(arr);
-}
-
-function tapCount(){
-// var nums = [100,300,400,60,40];
-
-// var sum = 0;
-
-// for(var i=0; i < nums.length; i++){
-
-//     sum += nums[i]
-
+//   alert(arr);
 // }
 
-// alert(sum);
-}
+// function tapCount(){
+// // var nums = [100,300,400,60,40]
 
-function timer(){
+// // var sum = 0;
 
-}
+// // for(var i=0; i < nums.length; i++){
+
+// //     sum += nums[i]
+
+// // }
+
+// // alert(sum);
+// }
 
 function reset() {
-    clearTimeout(timer); // to stop the timer from running.
+   clearTimeout(timer);
+   var x = document.getElementById("timerDiv");
+	x.innerHTML = 0;// to stop the timer from running.
 }
 
 function help(){
