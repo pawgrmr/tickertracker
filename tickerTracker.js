@@ -31,11 +31,9 @@ function countDown (count) {
 		var x = document.getElementById("timerDiv");
 		x.innerHTML = count;
 		timer = setTimeout (function() {countDown(count-1);}, 1000);
-		reset();
 	}
 	else 
-		var x = document.getElementById("timerDiv");
-		x.innerHTML = count;
+		reset();
 }
 
 function tapCount(tap) {
