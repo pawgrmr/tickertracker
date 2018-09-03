@@ -1,11 +1,12 @@
-// var square = document.querySelector(".square");
-
+var square = document.querySelector("#square");
 var breath = 0;
+var timer;
 var resetButton = document.querySelector("#reset");
 // var timer;
 
  square.addEventListener("click", function(){
- 	breaths();
+ 	// breaths();
+ 	countDown(30);
  });
 
 
@@ -37,7 +38,7 @@ resetButton.addEventListener("click", function(){
 })
 
 function reset() {	
-   	// clearTimeout();
+   clearTimeout(timer)
    	var x = document.getElementById("timerDiv");
 	x.innerHTML = 0;// to stop the timer from running.
 }
