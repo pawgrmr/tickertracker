@@ -1,13 +1,25 @@
-var square = document.querySelector(".square");
+// var square = document.querySelector(".square");
+let count = 30;
+var breath = 0;
 // var timer;
 
+ square.addEventListener("click", function(){
+ 	breaths();
+ });
 
-square.addEventListener("click", function(){
+
+
+
+function breaths() {
+	breath++;
+	alert(breath);
+}
+// square.addEventListener("click", function(breaths));
+// 	//start timer function 1
+// 	//finish timer function 2 - after 30 sec
+// 	// countDown(30);
 	
-	//start timer function 1
-	//finish timer function 2 - after 30 sec
-	countDown(30);
-	
+
 	// tap(); //function 3
 	//start with empty array
 	//add 1 to an empty array
@@ -22,32 +34,54 @@ square.addEventListener("click", function(){
 
 	//equal the sum of clicks to the tap count??
 
-})
 
 
 
-function countDown (count) {
-	if (count > 0) {
-		var x = document.getElementById("timerDiv");
-		x.innerHTML = count;
-		timer = setTimeout (function() {countDown(count-1);}, 1000);
-	}
-	else 
-		reset();
-}
 
-function tapCount(tap) {
- 
- if(tap = 0){
- 	tap++;
- 	var y = document.getElementById("taps");
- 	y.innerHTML = tap;
- 	//add statement here about clickCount running until timer runs out
- }
- // else 
+// function countDown(count) {
+// 	if (count > 0) {
+// 		var x = document.getElementById("timerDiv");
+// 		x.innerHTML = count;
+// 		timer = setTimeout (function() {countDown(count-1);}, 1000);
+// 	}
+// 	else {
+// 		reset();
+// 	}
+
+// }
+
+	// countDown(30);
+
+	// breath = 0;
+
+	// for (num=0; num<29; num++){
+	// 		console.log(num)
+	// } 
+	
+
+
+// function breaths(){
+
+// }
+
+// 	if (count <= 30){
+
+// 	} else{
+
+// 	}
+ 	
+// }
+
+ // if(tap = 0){
+ // 	tap++;
  // 	var y = document.getElementById("taps");
- // 	y.innerHTML = "START";
- } 
+ // 	y.innerHTML = tap;
+ // 	//add statement here about clickCount running until timer runs out
+ // }
+ // // else 
+ // // 	var y = document.getElementById("taps");
+ // // 	y.innerHTML = "START";
+ 
 
 // function tap() {
 //   var arr = [];
