@@ -12,7 +12,7 @@ var breath = 0;
 
 function breaths() {
 	breath++;
-	alert(breath);
+	square.textContent = breath;
 }
 // square.addEventListener("click", function(breaths));
 // 	//start timer function 1
