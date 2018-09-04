@@ -1,5 +1,5 @@
 var square = document.querySelector("#square");
-var breath = 0;
+var breath = Number(document.getElementById("#breath"));
 var timer;
 var resetButton = document.querySelector("#reset");
 // var timer;
@@ -10,15 +10,20 @@ square.addEventListener("click", function(){
 
 $("#square").on("click", function(){
 	countDown(30);
-	$(this).off();
+	$(this).off();	
 });
 
 // keep running this function until 30sec is complete
 function breaths() {
+	
 	breath++;
 	square.textContent = breath;
 }
 
+
+function sRR(){
+
+}
 //sum of clicks - function 5 
 // sum of clicks x 2 = SRR - function 6 
 // display SSR - alert box 
@@ -32,7 +37,6 @@ function countDown(count) {
 	else {
 		reset();
 	}
-
 }
 
 resetButton.addEventListener("click", function(){
@@ -43,9 +47,11 @@ function reset() {
    clearTimeout(timer)
    	var x = document.getElementById("timerDiv");
 	x.innerHTML = 30;
-	square.textContent = " ";// to stop the timer from running. // to reset sum to nil in square.
+	breath = 0;//to reset sum to nil in square.
+	square.textContent = " ";// to stop the timer from running.
 }
 
 function help(){
-
+ // redirect to new page with info re heart disease 
 }
+
