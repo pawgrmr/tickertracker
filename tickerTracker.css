@@ -2,7 +2,7 @@ body {
 	background-color: #ffffff;
 }
 
-.square {
+#square {
 	width: 30%;
 	background: #ff0000;
 	padding-bottom: 30%;
