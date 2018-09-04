@@ -15,24 +15,21 @@ $("#square").on("click", function(){
 
 // keep running this function until 30sec is complete
 function breaths() {
-	
 	breath++;
-	square.textContent = breath;
+	square.textContent = parseInt(breath);
+	var clicks = square.textContent;
+	SRR = clicks * 2; //actual SRR
 }
 
-
-function sRR(){
-
-}
-//sum of clicks - function 5 
-// sum of clicks x 2 = SRR - function 6 
-// display SSR - alert box 
 
 function countDown(count) {
 	if (count > (-1)) {
 		var x = document.getElementById("timerDiv");
 		x.innerHTML = count;
 		timer = setTimeout (function() {countDown(count-1);}, 1000);
+		if (count == 0){
+			window.alert("Sleeping Respiratory Rate: " + SRR) 
+		}
 	}
 	else {
 		reset();
