@@ -1,7 +1,9 @@
 var square = document.querySelector("#square");
 var breath = Number(document.getElementById("#breath"));
 var timer;
+var x = document.querySelector("#timerDiv");
 var resetButton = document.querySelector("#reset");
+var sum = document.querySelector("#sum");
 
 
 square.addEventListener("click", function(){
@@ -9,9 +11,11 @@ square.addEventListener("click", function(){
  });
 
 $("#square").on("click", function(){
-	countDown(30);
+	countDown(5);
 	$(this).off();	
 });
+
+
 
 function breaths() {
 	breath++;
@@ -23,11 +27,12 @@ function breaths() {
 
 function countDown(count) {
 	if (count > (-1)) {
-		var x = document.getElementById("timerDiv");
-		x.innerHTML = count;
+		x.textContent = count;
 		timer = setTimeout (function() {countDown(count-1);}, 1000);
 		if (count == 0){
-			window.alert("Sleeping Respiratory Rate: " + SRR) 
+			window.alert("Sleeping Respiratory Rate: " + SRR)
+			x.textContent = count; 
+			// sum.innerHTML=SRR;
 		}
 	}
 	else {
@@ -41,10 +46,11 @@ resetButton.addEventListener("click", function(){
 
 function reset() {	
    clearTimeout(timer)
-   	var x = document.getElementById("timerDiv");
 	x.innerHTML = 30;
-	breath = 0;//to reset sum to nil in square.
+	sum.innerHTML = 0;
+	breath = -1;
 	square.textContent = " ";// to stop the timer from running.
+	// breaths();
 }
 
 function help(){
