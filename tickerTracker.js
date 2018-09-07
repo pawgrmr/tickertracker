@@ -1,54 +1,74 @@
 var square = document.querySelector("#square");
 var breath = Number(document.getElementById("#breath"));
 var timer;
+var x = document.querySelector("#timerDiv");
 var resetButton = document.querySelector("#reset");
-// var timer;
+var sum = document.querySelector("#sum");
+var clicks;
+var y;
 
-square.addEventListener("click", function(){
- 	breaths();
- });
+init();
 
-$("#square").on("click", function(){
-	countDown(30);
-	$(this).off();	
-});
+function init() {
+	squareListener();
+}
 
-// keep running this function until 30sec is complete
+function squareListener() {
+	square.addEventListener("click", function(){
+			breaths();	
+	 });
+	
+	$("#square").on("click", function(){
+		countDown(30);
+		$(this).off();
+	
+	});
+
+}
+
+
 function breaths() {
+	breaths>=0;
 	breath++;
 	square.textContent = parseInt(breath);
 	var clicks = square.textContent;
 	SRR = clicks * 2; //actual SRR
-}
 
+}
 
 function countDown(count) {
-	if (count > (-1)) {
-		var x = document.getElementById("timerDiv");
-		x.innerHTML = count;
+	let y = count;
+	if (y > (-1)) {
+		x.textContent = y;
+
 		timer = setTimeout (function() {countDown(count-1);}, 1000);
-		if (count == 0){
-			window.alert("Sleeping Respiratory Rate: " + SRR) 
+		if (y == 0){
+			window.alert("Sleeping Respiratory Rate: " + SRR)
+			x.textContent = y; 
+			sum.textContent = SRR;
+			square.textContent = clicks;
 		}
 	}
-	else {
-		reset();
-	}
 }
+
+
 
 resetButton.addEventListener("click", function(){
-	reset();
+	location.reload();
+	// reset();
+	
 })
 
-function reset() {	
-   clearTimeout(timer)
-   	var x = document.getElementById("timerDiv");
-	x.innerHTML = 30;
-	breath = 0;//to reset sum to nil in square.
-	square.textContent = " ";// to stop the timer from running.
-}
+// function reset() {	
+//    clearTimeout(timer)
 
-function help(){
- // redirect to new page with info re heart disease 
-}
+// // return timer to " "
+// 	x.innerHTML = " ";
+// 	sum.innerHTML = " ";
+// 	square.textContent = " ";// to stop the timer from running.
+// 	breath=0;
+
+//  }
+
+
 
