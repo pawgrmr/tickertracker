@@ -52,7 +52,6 @@ function countDown(count) {
 }
 
 
-
 resetButton.addEventListener("click", function(){
 	location.reload();
 	// reset();
