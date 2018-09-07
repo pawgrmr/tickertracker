@@ -10,7 +10,7 @@ body {
 	margin: 10%;
 }
 
-#container {
+.container {
 	max-width: 1000px;
 	margin: 0 100px;
 }
