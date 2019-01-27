@@ -1,6 +1,7 @@
 var square = document.querySelector("#square");
 var breath = Number(document.getElementById("#breath"));
 var timer;
+var box = document.querySelector(".box");
 var x = document.querySelector("#timerDiv");
 var resetButton = document.querySelector("#reset");
 var sum = document.querySelector("#sum");
@@ -21,17 +22,14 @@ function squareListener() {
 	$("#square").on("click", function(){
 		countDown(30);
 		$(this).off();
-	
 	});
-
 }
-
 
 function breaths() {
 	breaths>=0;
 	breath++;
-	square.textContent = parseInt(breath);
-	var clicks = square.textContent;
+	box.textContent = parseInt(breath);
+	var clicks = box.textContent;
 	SRR = clicks * 2; //actual SRR
 
 }
@@ -46,7 +44,7 @@ function countDown(count) {
 			window.alert("Sleeping Respiratory Rate: " + SRR)
 			x.textContent = y; 
 			sum.textContent = SRR;
-			square.textContent = clicks;
+			box.textContent = clicks;
 		}
 	}
 }
