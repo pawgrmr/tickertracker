@@ -2,15 +2,60 @@ body {
 	background-color: #ffffff;
 }
 
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3 {
+  text-decoration: underline;  
+}
+
+.box {
+	width: 30px;
+  height: 30px;
+  color: #000;
+	text-align: center;
+  transform: rotate(45deg);
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 #square {
-	width: 30%;
-	background: #ff0000;
-	padding-bottom: 30%;
-	float: left;
-	margin: 10%;
+  background-color: red;
+  height: 100px;
+  transform: rotate(-45deg);
+  width: 100px;
+  margin: 20%;
+  color: white;
+}
+
+#square:before, #square:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 100px;
+  position: absolute;
+  width: 100px;
+  top: -50px;
+}
+
+#square:before {
+  top: -2px;
+  right: -50px;
+}
+
+#square:after {
+  right: -3px;
 }
 
 .container {
 	max-width: 1000px;
 	margin: 0 100px;
+}
+
+.container-2 {
+  max-width: 1000px;
+  margin: 0 75px;
 }

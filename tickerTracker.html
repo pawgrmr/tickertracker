@@ -11,10 +11,12 @@
   <body>
     <h1>Ticker Tracker</h1>
     <div id="directions">
-      <h3>Directions</h3>
+      <h3>
+        <ul>Directions</ul>
+      </h3>
         <ol>
           <li>Make sure your pet is asleep and not dreaming</li>
-          <li>Click on the square below for every breath as the timer runs below. Note: 1 breath = 1 breath in and out.</li>
+          <li>Click on the heart below for every breath as the timer runs below. Note: 1 breath = 1 breath in and out.</li>
           <li>You will be provided with a Sleeping Respiratory Rate when the timer runs out.</li>
             <ul>
                 <li>Normal SRR in dogs and cats: < 30 breaths/min.</li>
@@ -28,20 +30,26 @@
     <div class="container">
       <button id="square">
         <div id="breath"></div>
+        <div class="box"></div>
       </button>
     </div>
-
-    <div class="time">Time remaining (seconds):</div>
-    <div id="timerDiv"></div>
-    <div class="breaths">SRR:</div>
-    <div id="sum"></div>
-    
-    <div id="nav">
-      <button id="reset">Reset</button>
-      <button id="help" onclick="window.location=('help.html');">Help</button>
+    <div class="container-2">
+      <div class="time">
+        <ul>Time remaining (seconds):</ul>
+        <ul><div id="timerDiv"></ul>
+        <ul><div class="breaths">SRR:</div></ul>
+        <ul><div id="sum"></div></ul>
+        <ul>        
+          <div id="nav">
+          <button id="reset">Reset</button>
+          <button id="help" onclick="window.location=('help.html');">Help</button>
+          </div>
+        </ul>
+      </div>
     </div>
+      
 
+    </div>
     <script type="text/javascript" src="tickerTracker.js"></script>
   </body>
-
 </html>
